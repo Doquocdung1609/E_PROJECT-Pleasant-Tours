@@ -32,162 +32,319 @@
 <!-- package section start -->
 
 <section class="packages">
-    <h1 class="heading-title">top destinations</h1>
+
+    <h1 class="heading-title">our packages</h1>
     <div class="box-container">
+        <div class="box">
+            <div class="image">
+                <img src="https://crystalcruises.com/_next/image?url=https%3A%2F%2Fcdn.crystalcruises.com%2Fimages%2Fscp71evy%2Fproduction%2F23882ff3efd3b59a52be5f0ebbc01c011deb71ed-5065x3299.jpg&w=1920&q=75" alt="">
+            </div>
+            <div class="content">
+                <h2>THE AMERICAS & CARIBBEAN</h2>
+                <h3>Fort Lauderdale -> Fort Lauderdale</h3>
+                <p>11 NIGHTS</p>
+                <div class="time">
+                    <div class="time-detail">
+                        <label><b>DEPART</b></label>
+                        <p>DEC 18, 2024</p>
+                    </div>
+                    <div class="time-detail">
+                        <label><b>ARRIVE</b></label>
+                        <p>DEC 29, 2024</p>
+                    </div>
+                </div>
+                <p><b> FARES FROM $5,600  PER GUEST </b></p>
+                <label>SHIP </label>
+                <p class="bottom-content"><b>CRYSTAL SERENITY</b></p>
+                
+            </div>
+            <a href="detail.php" class="btn">Detail</a>
+        </div>
+
+        <div class="box">
+            <div class="image">
+                <img src="https://crystalcruises.com/_next/image?url=https%3A%2F%2Fcdn.crystalcruises.com%2Fimages%2Fscp71evy%2Fproduction%2F6f7412a84941262c16901a0c260834de45cc1597-5041x3361.jpg&w=1920&q=75" alt="">
+            </div>
+            <div class="content">
+                <h2>AFRICA & INDIAN OCEAN</h2>
+                <h3>Tema -> Las Palmas, Gran Canaria</h3>
+                <p>11 NIGHTS</p>
+                <div class="time">
+                    <div class="time-detail">
+                        <label><b>DEPART</b></label>
+                        <p>MAY 16, 2024</p>
+                    </div>
+                    <div class="time-detail">
+                        <label><b>ARRIVE</b></label>
+                        <p> MAY 27, 2024</p>
+                    </div>
+                </div>
+                <p><b> FARES FROM $6,900  PER GUEST</b></p>
+                <label>SHIP </label>
+                <p class="bottom-content"><b>CRYSTAL SERENITY</b></p>
+            </div>
+            <a href="detail.php" class="btn">Detail</a>
+        </div>
+
+        <div class="box">
+            <div class="image">
+                <img src="https://crystalcruises.com/_next/image?url=https%3A%2F%2Fcdn.crystalcruises.com%2Fimages%2Fscp71evy%2Fproduction%2F14611525b96a1810e6cb2041d0351a8835ada8b3-4256x2832.jpg%3Frect%3D0%2C1177%2C4256%2C1647&w=1920&q=75" alt="">
+            </div>
+            <div class="content">
+                <h2>ASIA</h2>
+                <h3>Singapore -> Singapore</h3>
+                <p>47 NIGHTS</p>
+                <div class="time">
+                    <div class="time-detail">
+                        <label><b>DEPART</b></label>
+                        <p>JAN 18, 2025</p>
+                    </div>
+                        <div class="time-detail">
+                        <label><b>ARRIVE</b></label>
+                        <p>MAR 06, 2025</p>
+                    </div>
+                </div>
+                    <p><b> FARES FROM $30,700  PER GUEST</b></p>
+                    <label>SHIP </label>
+                    <p class="bottom-content"><b>CRYSTAL SERENITY</b></p>
+            </div>
+                <a href="detail.php" class="btn">Detail</a>
+        </div>
+
+        <div class="box">
+            <div class="image">
+                <img src="https://crystalcruises.com/_next/image?url=https%3A%2F%2Fcdn.crystalcruises.com%2Fimages%2Fscp71evy%2Fproduction%2F23882ff3efd3b59a52be5f0ebbc01c011deb71ed-5065x3299.jpg&w=1920&q=75" alt="">
+            </div>
+            <div class="content">
+                <h2>THE AMERICAS & CARIBBEAN</h2>
+                <h3>Fort Lauderdale -> Fort Lauderdale</h3>
+                <p>11 NIGHTS</p>
+                <div class="time">
+                    <div class="time-detail">
+                        <label><b>DEPART</b></label>
+                        <p>DEC 18, 2024</p>
+                    </div>
+                    <div class="time-detail">
+                        <label><b>ARRIVE</b></label>
+                        <p>DEC 29, 2024</p>
+                    </div>
+                </div>
+                <p><b> FARES FROM $5,600  PER GUEST </b></p>
+                <label>SHIP </label>
+                <p class="bottom-content"><b>CRYSTAL SERENITY</b></p>
+                
+            </div>
+            <a href="detail.php" class="btn">Detail</a>
+        </div>
+
+        <div class="box">
+            <div class="image">
+                <img src="https://crystalcruises.com/_next/image?url=https%3A%2F%2Fcdn.crystalcruises.com%2Fimages%2Fscp71evy%2Fproduction%2F6f7412a84941262c16901a0c260834de45cc1597-5041x3361.jpg&w=1920&q=75" alt="">
+            </div>
+            <div class="content">
+                <h2>AFRICA & INDIAN OCEAN</h2>
+                <h3>Tema -> Las Palmas, Gran Canaria</h3>
+                <p>11 NIGHTS</p>
+                <div class="time">
+                    <div class="time-detail">
+                        <label><b>DEPART</b></label>
+                        <p>MAY 16, 2024</p>
+                    </div>
+                    <div class="time-detail">
+                        <label><b>ARRIVE</b></label>
+                        <p> MAY 27, 2024</p>
+                    </div>
+                </div>
+                <p><b> FARES FROM $6,900  PER GUEST</b></p>
+                <label>SHIP </label>
+                <p class="bottom-content"><b>CRYSTAL SERENITY</b></p>
+            </div>
+            <a href="detail.php" class="btn">Detail</a>
+        </div>
+
+        <div class="box">
+            <div class="image">
+                <img src="https://crystalcruises.com/_next/image?url=https%3A%2F%2Fcdn.crystalcruises.com%2Fimages%2Fscp71evy%2Fproduction%2F14611525b96a1810e6cb2041d0351a8835ada8b3-4256x2832.jpg%3Frect%3D0%2C1177%2C4256%2C1647&w=1920&q=75" alt="">
+            </div>
+            <div class="content">
+                <h2>ASIA</h2>
+                <h3>Singapore -> Singapore</h3>
+                <p>47 NIGHTS</p>
+                <div class="time">
+                    <div class="time-detail">
+                        <label><b>DEPART</b></label>
+                        <p>JAN 18, 2025</p>
+                    </div>
+                        <div class="time-detail">
+                        <label><b>ARRIVE</b></label>
+                        <p>MAR 06, 2025</p>
+                    </div>
+                </div>
+                    <p><b> FARES FROM $30,700  PER GUEST</b></p>
+                    <label>SHIP </label>
+                    <p class="bottom-content"><b>CRYSTAL SERENITY</b></p>
+            </div>
+                <a href="detail.php" class="btn">Detail</a>
+        </div>
+
+        <div class="box">
+            <div class="image">
+                <img src="https://crystalcruises.com/_next/image?url=https%3A%2F%2Fcdn.crystalcruises.com%2Fimages%2Fscp71evy%2Fproduction%2F23882ff3efd3b59a52be5f0ebbc01c011deb71ed-5065x3299.jpg&w=1920&q=75" alt="">
+            </div>
+            <div class="content">
+                <h2>THE AMERICAS & CARIBBEAN</h2>
+                <h3>Fort Lauderdale -> Fort Lauderdale</h3>
+                <p>11 NIGHTS</p>
+                <div class="time">
+                    <div class="time-detail">
+                        <label><b>DEPART</b></label>
+                        <p>DEC 18, 2024</p>
+                    </div>
+                    <div class="time-detail">
+                        <label><b>ARRIVE</b></label>
+                        <p>DEC 29, 2024</p>
+                    </div>
+                </div>
+                <p><b> FARES FROM $5,600  PER GUEST </b></p>
+                <label>SHIP </label>
+                <p class="bottom-content"><b>CRYSTAL SERENITY</b></p>
+                
+            </div>
+            <a href="detail.php" class="btn">Detail</a>
+        </div>
+
+        <div class="box">
+            <div class="image">
+                <img src="https://crystalcruises.com/_next/image?url=https%3A%2F%2Fcdn.crystalcruises.com%2Fimages%2Fscp71evy%2Fproduction%2F6f7412a84941262c16901a0c260834de45cc1597-5041x3361.jpg&w=1920&q=75" alt="">
+            </div>
+            <div class="content">
+                <h2>AFRICA & INDIAN OCEAN</h2>
+                <h3>Tema -> Las Palmas, Gran Canaria</h3>
+                <p>11 NIGHTS</p>
+                <div class="time">
+                    <div class="time-detail">
+                        <label><b>DEPART</b></label>
+                        <p>MAY 16, 2024</p>
+                    </div>
+                    <div class="time-detail">
+                        <label><b>ARRIVE</b></label>
+                        <p> MAY 27, 2024</p>
+                    </div>
+                </div>
+                <p><b> FARES FROM $6,900  PER GUEST</b></p>
+                <label>SHIP </label>
+                <p class="bottom-content"><b>CRYSTAL SERENITY</b></p>
+            </div>
+            <a href="detail.php" class="btn">Detail</a>
+        </div>
+
+        <div class="box">
+            <div class="image">
+                <img src="https://crystalcruises.com/_next/image?url=https%3A%2F%2Fcdn.crystalcruises.com%2Fimages%2Fscp71evy%2Fproduction%2F14611525b96a1810e6cb2041d0351a8835ada8b3-4256x2832.jpg%3Frect%3D0%2C1177%2C4256%2C1647&w=1920&q=75" alt="">
+            </div>
+            <div class="content">
+                <h2>ASIA</h2>
+                <h3>Singapore -> Singapore</h3>
+                <p>47 NIGHTS</p>
+                <div class="time">
+                    <div class="time-detail">
+                        <label><b>DEPART</b></label>
+                        <p>JAN 18, 2025</p>
+                    </div>
+                        <div class="time-detail">
+                        <label><b>ARRIVE</b></label>
+                        <p>MAR 06, 2025</p>
+                    </div>
+                </div>
+                    <p><b> FARES FROM $30,700  PER GUEST</b></p>
+                    <label>SHIP </label>
+                    <p class="bottom-content"><b>CRYSTAL SERENITY</b></p>
+            </div>
+                <a href="detail.php" class="btn">Detail</a>
+        </div>
+
+        <div class="box">
+            <div class="image">
+                <img src="https://crystalcruises.com/_next/image?url=https%3A%2F%2Fcdn.crystalcruises.com%2Fimages%2Fscp71evy%2Fproduction%2F23882ff3efd3b59a52be5f0ebbc01c011deb71ed-5065x3299.jpg&w=1920&q=75" alt="">
+            </div>
+            <div class="content">
+                <h2>THE AMERICAS & CARIBBEAN</h2>
+                <h3>Fort Lauderdale -> Fort Lauderdale</h3>
+                <p>11 NIGHTS</p>
+                <div class="time">
+                    <div class="time-detail">
+                        <label><b>DEPART</b></label>
+                        <p>DEC 18, 2024</p>
+                    </div>
+                    <div class="time-detail">
+                        <label><b>ARRIVE</b></label>
+                        <p>DEC 29, 2024</p>
+                    </div>
+                </div>
+                <p><b> FARES FROM $5,600  PER GUEST </b></p>
+                <label>SHIP </label>
+                <p class="bottom-content"><b>CRYSTAL SERENITY</b></p>
+                
+            </div>
+            <a href="detail.php" class="btn">Detail</a>
+        </div>
+
+        <div class="box">
+            <div class="image">
+                <img src="https://crystalcruises.com/_next/image?url=https%3A%2F%2Fcdn.crystalcruises.com%2Fimages%2Fscp71evy%2Fproduction%2F6f7412a84941262c16901a0c260834de45cc1597-5041x3361.jpg&w=1920&q=75" alt="">
+            </div>
+            <div class="content">
+                <h2>AFRICA & INDIAN OCEAN</h2>
+                <h3>Tema -> Las Palmas, Gran Canaria</h3>
+                <p>11 NIGHTS</p>
+                <div class="time">
+                    <div class="time-detail">
+                        <label><b>DEPART</b></label>
+                        <p>MAY 16, 2024</p>
+                    </div>
+                    <div class="time-detail">
+                        <label><b>ARRIVE</b></label>
+                        <p> MAY 27, 2024</p>
+                    </div>
+                </div>
+                <p><b> FARES FROM $6,900  PER GUEST</b></p>
+                <label>SHIP </label>
+                <p class="bottom-content"><b>CRYSTAL SERENITY</b></p>
+            </div>
+            <a href="detail.php" class="btn">Detail</a>
+        </div>
+
+        <div class="box">
+            <div class="image">
+                <img src="https://crystalcruises.com/_next/image?url=https%3A%2F%2Fcdn.crystalcruises.com%2Fimages%2Fscp71evy%2Fproduction%2F14611525b96a1810e6cb2041d0351a8835ada8b3-4256x2832.jpg%3Frect%3D0%2C1177%2C4256%2C1647&w=1920&q=75" alt="">
+            </div>
+            <div class="content">
+                <h2>ASIA</h2>
+                <h3>Singapore -> Singapore</h3>
+                <p>47 NIGHTS</p>
+                <div class="time">
+                    <div class="time-detail">
+                        <label><b>DEPART</b></label>
+                        <p>JAN 18, 2025</p>
+                    </div>
+                        <div class="time-detail">
+                        <label><b>ARRIVE</b></label>
+                        <p>MAR 06, 2025</p>
+                    </div>
+                </div>
+                    <p><b> FARES FROM $30,700  PER GUEST</b></p>
+                    <label>SHIP </label>
+                    <p class="bottom-content"><b>CRYSTAL SERENITY</b></p>
+            </div>
+                <a href="detail.php" class="btn">Detail</a>
+        </div>
+    
         
-        <div class="box">
-            <div class="image">
-                <img src="https://crystalcruises.com/_next/image?url=https%3A%2F%2Fcdn.crystalcruises.com%2Fimages%2Fscp71evy%2Fproduction%2Fd80c6a236af7e2fd7d7984e3c02ff7f4bd25d820-3620x3620.jpg%3Frect%3D0%2C375%2C3620%2C2871%26w%3D1000%26h%3D793%26auto%3Dformat&w=1440&q=75" alt="">
-            </div>
-            <div class="content">
-                <h3>adventure & tour</h3>
-                <p>ctonentctonentctonentctonent</p>
-                <a href="detail.php" class="btn">DETAILS</a>
-            </div>
-        </div>
-
-
-        <div class="box">
-            <div class="image">
-                <img src="https://crystalcruises.com/_next/image?url=https%3A%2F%2Fcdn.crystalcruises.com%2Fimages%2Fscp71evy%2Fproduction%2Fd80c6a236af7e2fd7d7984e3c02ff7f4bd25d820-3620x3620.jpg%3Frect%3D0%2C375%2C3620%2C2871%26w%3D1000%26h%3D793%26auto%3Dformat&w=1440&q=75" alt="">
-            </div>
-            <div class="content">
-                <h3>adventure & tour</h3>
-                <p>ctonentctonentctonentctonent</p>
-                <a href="detail.php" class="btn">DETAILS</a>
-            </div>
-        </div>
-
-
-        <div class="box">
-            <div class="image">
-                <img src="https://crystalcruises.com/_next/image?url=https%3A%2F%2Fcdn.crystalcruises.com%2Fimages%2Fscp71evy%2Fproduction%2Fd80c6a236af7e2fd7d7984e3c02ff7f4bd25d820-3620x3620.jpg%3Frect%3D0%2C375%2C3620%2C2871%26w%3D1000%26h%3D793%26auto%3Dformat&w=1440&q=75" alt="">
-            </div>
-            <div class="content">
-                <h3>adventure & tour</h3>
-                <p>ctonentctonentctonentctonent</p>
-                <a href="detail.php" class="btn">DETAILS</a>
-            </div>
-        </div>
-
-
-
-        <div class="box">
-            <div class="image">
-                <img src="https://crystalcruises.com/_next/image?url=https%3A%2F%2Fcdn.crystalcruises.com%2Fimages%2Fscp71evy%2Fproduction%2Fd80c6a236af7e2fd7d7984e3c02ff7f4bd25d820-3620x3620.jpg%3Frect%3D0%2C375%2C3620%2C2871%26w%3D1000%26h%3D793%26auto%3Dformat&w=1440&q=75" alt="">
-            </div>
-            <div class="content">
-                <h3>adventure & tour</h3>
-                <p>ctonentctonentctonentctonent</p>
-                <a href="detail.php" class="btn">DETAILS</a>
-            </div>
-        </div>
-
-        <div class="box">
-            <div class="image">
-                <img src="https://crystalcruises.com/_next/image?url=https%3A%2F%2Fcdn.crystalcruises.com%2Fimages%2Fscp71evy%2Fproduction%2Fd80c6a236af7e2fd7d7984e3c02ff7f4bd25d820-3620x3620.jpg%3Frect%3D0%2C375%2C3620%2C2871%26w%3D1000%26h%3D793%26auto%3Dformat&w=1440&q=75" alt="">
-            </div>
-            <div class="content">
-                <h3>adventure & tour</h3>
-                <p>ctonentctonentctonentctonent</p>
-                <a href="detail.php" class="btn">DETAILS</a>
-            </div>
-        </div>
-
-
-        <div class="box">
-            <div class="image">
-                <img src="https://crystalcruises.com/_next/image?url=https%3A%2F%2Fcdn.crystalcruises.com%2Fimages%2Fscp71evy%2Fproduction%2Fd80c6a236af7e2fd7d7984e3c02ff7f4bd25d820-3620x3620.jpg%3Frect%3D0%2C375%2C3620%2C2871%26w%3D1000%26h%3D793%26auto%3Dformat&w=1440&q=75" alt="">
-            </div>
-            <div class="content">
-                <h3>adventure & tour</h3>
-                <p>ctonentctonentctonentctonent</p>
-                <a href="detail.php" class="btn">DETAILS</a>
-            </div>
-        </div>
-
-
-        <div class="box">
-            <div class="image">
-                <img src="https://crystalcruises.com/_next/image?url=https%3A%2F%2Fcdn.crystalcruises.com%2Fimages%2Fscp71evy%2Fproduction%2Fd80c6a236af7e2fd7d7984e3c02ff7f4bd25d820-3620x3620.jpg%3Frect%3D0%2C375%2C3620%2C2871%26w%3D1000%26h%3D793%26auto%3Dformat&w=1440&q=75" alt="">
-            </div>
-            <div class="content">
-                <h3>adventure & tour</h3>
-                <p>ctonentctonentctonentctonent</p>
-                <a href="detail.php" class="btn">DETAILS</a>
-            </div>
-        </div>
-
-
-        <div class="box">
-            <div class="image">
-                <img src="https://crystalcruises.com/_next/image?url=https%3A%2F%2Fcdn.crystalcruises.com%2Fimages%2Fscp71evy%2Fproduction%2Fd80c6a236af7e2fd7d7984e3c02ff7f4bd25d820-3620x3620.jpg%3Frect%3D0%2C375%2C3620%2C2871%26w%3D1000%26h%3D793%26auto%3Dformat&w=1440&q=75" alt="">
-            </div>
-            <div class="content">
-                <h3>adventure & tour</h3>
-                <p>ctonentctonentctonentctonent</p>
-                <a href="detail.php" class="btn">DETAILS</a>
-            </div>
-        </div>
-
-
-
-        <div class="box">
-            <div class="image">
-                <img src="https://crystalcruises.com/_next/image?url=https%3A%2F%2Fcdn.crystalcruises.com%2Fimages%2Fscp71evy%2Fproduction%2Fd80c6a236af7e2fd7d7984e3c02ff7f4bd25d820-3620x3620.jpg%3Frect%3D0%2C375%2C3620%2C2871%26w%3D1000%26h%3D793%26auto%3Dformat&w=1440&q=75" alt="">
-            </div>
-            <div class="content">
-                <h3>adventure & tour</h3>
-                <p>ctonentctonentctonentctonent</p>
-                <a href="detail.php" class="btn">DETAILS</a>
-            </div>
-        </div>
-
-
-
-        <div class="box">
-            <div class="image">
-                <img src="https://crystalcruises.com/_next/image?url=https%3A%2F%2Fcdn.crystalcruises.com%2Fimages%2Fscp71evy%2Fproduction%2Fd80c6a236af7e2fd7d7984e3c02ff7f4bd25d820-3620x3620.jpg%3Frect%3D0%2C375%2C3620%2C2871%26w%3D1000%26h%3D793%26auto%3Dformat&w=1440&q=75" alt="">
-            </div>
-            <div class="content">
-                <h3>adventure & tour</h3>
-                <p>ctonentctonentctonentctonent</p>
-                <a href="detail.php" class="btn">DETAILS</a>
-            </div>
-        </div>
-
-
-        <div class="box">
-            <div class="image">
-                <img src="https://crystalcruises.com/_next/image?url=https%3A%2F%2Fcdn.crystalcruises.com%2Fimages%2Fscp71evy%2Fproduction%2Fd80c6a236af7e2fd7d7984e3c02ff7f4bd25d820-3620x3620.jpg%3Frect%3D0%2C375%2C3620%2C2871%26w%3D1000%26h%3D793%26auto%3Dformat&w=1440&q=75" alt="">
-            </div>
-            <div class="content">
-                <h3>adventure & tour</h3>
-                <p>ctonentctonentctonentctonent</p>
-                <a href="detail.php" class="btn">DETAILS</a>
-            </div>
-        </div>
-
-
-        <div class="box">
-            <div class="image">
-                <img src="https://crystalcruises.com/_next/image?url=https%3A%2F%2Fcdn.crystalcruises.com%2Fimages%2Fscp71evy%2Fproduction%2Fd80c6a236af7e2fd7d7984e3c02ff7f4bd25d820-3620x3620.jpg%3Frect%3D0%2C375%2C3620%2C2871%26w%3D1000%26h%3D793%26auto%3Dformat&w=1440&q=75" alt="">
-            </div>
-            <div class="content">
-                <h3>adventure & tour</h3>
-                <p>ctonentctonentctonentctonent</p>
-                <a href="detail.php" class="btn">DETAILS</a>
-            </div>
-        </div>
-
     </div>
-
     <div class="load-more"><span class="btn">load more</span></div>
-
-
+    
 
 </section>
-
 
 
 

@@ -58,7 +58,7 @@
         <input type="email" placeholder="Email" required />
         <input type="password" placeholder="Password" required />
         <a href="#">Forgot your password?</a>
-        <button>Sign In</button>
+        <button><a href="Dashboard.php" style="color: #ffffff;">Sign In</a></button>
       </form>
     </div>
 

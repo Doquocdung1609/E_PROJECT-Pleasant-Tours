@@ -64,25 +64,213 @@
         </div>
     </div>
     <div class="col-sm-9 p-5 my-5 border">
-        <table class="table detail">
-            <tbody>
+
+    <table class="table detail">
+        <tbody>
             <tr>
                 <td rowspan="2" style="margin:0; padding:29px">01</td>
                 <td colspan="3">Singapore</td>
-                <td rowspan="2" style="margin:0; padding:29px">MAR 12,2024</td>
+                <td rowspan="2" style="margin:0; padding:29px">MAR 12, 2024</td>
                 <td rowspan="2" style="margin:0; padding:29px">Over Night</td>
                 <td rowspan="2" style="margin:0; padding:29px"></td>
                 <td rowspan="2" style="margin:0; padding:29px">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-plus" viewBox="0 0 17 17">
-                    <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4"/>
-                    </svg>
+                    <button class="toggleButton">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-plus" viewBox="0 0 17 17">
+                            <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4"/>
+                        </svg>
+                    </button>
                 </td>
             </tr>
             <tr>
                 <td colspan="3">Singapore</td> 
             </tr>
-            </tbody>
-        </table>
+            <tr>
+                <td colspan="8">
+                    <div class="detail-content" id="data1" style="display: none;">
+                        <div class="content-wrapper">
+                            <img style="width: 200px;" src="https://crystalcruises.com/_next/image?url=https%3A%2F%2Fcdn.crystalcruises.com%2Fimages%2Fscp71evy%2Fproduction%2F9a3236f4ed68c4d565d964ade0e79187298b2d62-4000x2667.jpg%3Frect%3D1090%2C0%2C2910%2C2667%26w%3D1920%26auto%3Dformat&w=1920&q=75" alt="">
+                            <p>adatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadata</p>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+
+
+           
+        </tbody>
+
+
+    </table>
+
+    <table class="table detail">
+    <tr>
+                <td rowspan="2" style="margin:0; padding:29px">02</td>
+                <td colspan="3">Singapore</td>
+                <td rowspan="2" style="margin:0; padding:29px">MAR 12, 2024</td>
+                <td rowspan="2" style="margin:0; padding:29px">Over Night</td>
+                <td rowspan="2" style="margin:0; padding:29px"></td>
+                <td rowspan="2" style="margin:0; padding:29px">
+                    <button class="toggleButton2">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-plus" viewBox="0 0 17 17">
+                            <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4"/>
+                        </svg>
+                    </button>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="3">Singapore</td> 
+            </tr>
+            <tr>
+                <td colspan="8">
+                    <div class="detail-content" id="data2" style="display: none;">
+                        <div class="content-wrapper">
+                            <img style="width: 200px;" src="https://crystalcruises.com/_next/image?url=https%3A%2F%2Fcdn.crystalcruises.com%2Fimages%2Fscp71evy%2Fproduction%2F9a3236f4ed68c4d565d964ade0e79187298b2d62-4000x2667.jpg%3Frect%3D1090%2C0%2C2910%2C2667%26w%3D1920%26auto%3Dformat&w=1920&q=75" alt="">
+                            <p>data2</p>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+    </table>
+
+
+    <table class="table detail">
+        <tbody>
+            <tr>
+                <td rowspan="2" style="margin:0; padding:29px">03</td>
+                <td colspan="3">Singapore</td>
+                <td rowspan="2" style="margin:0; padding:29px">MAR 12, 2024</td>
+                <td rowspan="2" style="margin:0; padding:29px">Over Night</td>
+                <td rowspan="2" style="margin:0; padding:29px"></td>
+                <td rowspan="2" style="margin:0; padding:29px">
+                    <button class="toggleButton3">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-plus" viewBox="0 0 17 17">
+                            <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4"/>
+                        </svg>
+                    </button>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="3">Singapore</td> 
+            </tr>
+            <tr>
+                <td colspan="8">
+                    <div class="detail-content" id="data3" style="display: none;">
+                        <div class="content-wrapper">
+                            <img style="width: 200px;" src="https://crystalcruises.com/_next/image?url=https%3A%2F%2Fcdn.crystalcruises.com%2Fimages%2Fscp71evy%2Fproduction%2F9a3236f4ed68c4d565d964ade0e79187298b2d62-4000x2667.jpg%3Frect%3D1090%2C0%2C2910%2C2667%26w%3D1920%26auto%3Dformat&w=1920&q=75" alt="">
+                            <p>adatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadata</p>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+
+
+           
+        </tbody>
+
+
+    </table>
+
+    <table class="table detail">
+    <tr>
+                <td rowspan="2" style="margin:0; padding:29px">04</td>
+                <td colspan="3">Singapore</td>
+                <td rowspan="2" style="margin:0; padding:29px">MAR 12, 2024</td>
+                <td rowspan="2" style="margin:0; padding:29px">Over Night</td>
+                <td rowspan="2" style="margin:0; padding:29px"></td>
+                <td rowspan="2" style="margin:0; padding:29px">
+                    <button class="toggleButton4">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-plus" viewBox="0 0 17 17">
+                            <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4"/>
+                        </svg>
+                    </button>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="3">Singapore</td> 
+            </tr>
+            <tr>
+                <td colspan="8">
+                    <div class="detail-content" id="data4" style="display: none;">
+                        <div class="content-wrapper">
+                            <img style="width: 200px;" src="https://crystalcruises.com/_next/image?url=https%3A%2F%2Fcdn.crystalcruises.com%2Fimages%2Fscp71evy%2Fproduction%2F9a3236f4ed68c4d565d964ade0e79187298b2d62-4000x2667.jpg%3Frect%3D1090%2C0%2C2910%2C2667%26w%3D1920%26auto%3Dformat&w=1920&q=75" alt="">
+                            <p>data2</p>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+    </table>
+
+
+    <table class="table detail">
+        <tbody>
+            <tr>
+                <td rowspan="2" style="margin:0; padding:29px">05</td>
+                <td colspan="3">Singapore</td>
+                <td rowspan="2" style="margin:0; padding:29px">MAR 12, 2024</td>
+                <td rowspan="2" style="margin:0; padding:29px">Over Night</td>
+                <td rowspan="2" style="margin:0; padding:29px"></td>
+                <td rowspan="2" style="margin:0; padding:29px">
+                    <button class="toggleButton5">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-plus" viewBox="0 0 17 17">
+                            <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4"/>
+                        </svg>
+                    </button>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="3">Singapore</td> 
+            </tr>
+            <tr>
+                <td colspan="8">
+                    <div class="detail-content" id="data5" style="display: none;">
+                        <div class="content-wrapper">
+                            <img style="width: 200px;" src="https://crystalcruises.com/_next/image?url=https%3A%2F%2Fcdn.crystalcruises.com%2Fimages%2Fscp71evy%2Fproduction%2F9a3236f4ed68c4d565d964ade0e79187298b2d62-4000x2667.jpg%3Frect%3D1090%2C0%2C2910%2C2667%26w%3D1920%26auto%3Dformat&w=1920&q=75" alt="">
+                            <p>adatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadata</p>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+
+
+           
+        </tbody>
+
+
+    </table>
+
+    <table class="table detail">
+    <tr>
+                <td rowspan="2" style="margin:0; padding:29px">06</td>
+                <td colspan="3">Singapore</td>
+                <td rowspan="2" style="margin:0; padding:29px">MAR 12, 2024</td>
+                <td rowspan="2" style="margin:0; padding:29px">Over Night</td>
+                <td rowspan="2" style="margin:0; padding:29px"></td>
+                <td rowspan="2" style="margin:0; padding:29px">
+                    <button class="toggleButton6">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-plus" viewBox="0 0 17 17">
+                            <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4"/>
+                        </svg>
+                    </button>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="3">Singapore</td> 
+            </tr>
+            <tr>
+                <td colspan="8">
+                    <div class="detail-content" id="data6" style="display: none;">
+                        <div class="content-wrapper">
+                            <img style="width: 200px;" src="https://crystalcruises.com/_next/image?url=https%3A%2F%2Fcdn.crystalcruises.com%2Fimages%2Fscp71evy%2Fproduction%2F9a3236f4ed68c4d565d964ade0e79187298b2d62-4000x2667.jpg%3Frect%3D1090%2C0%2C2910%2C2667%26w%3D1920%26auto%3Dformat&w=1920&q=75" alt="">
+                            <p>data2</p>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+    </table>
+
+
+
+
     </div>
 </div>
 

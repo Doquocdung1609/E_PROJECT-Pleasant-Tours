@@ -87,7 +87,7 @@
 
 
     <div class="box">
-    <img  src="https://img.icons8.com/wired/64/FFFFFF/beach.png" alt="beach"/>
+    <img width="64" height="50" src="https://img.icons8.com/ios/50/FFFFFF/beach.png" alt="beach"/>
     <h3>BEACH</h3>
     </div>
 
@@ -240,7 +240,7 @@ At Go Tour, we believe in sustainable tourism practices that respect local cultu
 <section class="home-offer">
     <div class="content">
         <h3>up to 50% off</h3>
-        <p>contentcontentcontentcontent</p>
+        <p>DEAL HOT FOR EARLY BIRD</p>
         <a href="book.php" class="btn">Book now</a>
     </div>
 </section>
