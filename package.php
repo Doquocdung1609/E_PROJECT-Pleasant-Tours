@@ -35,309 +35,48 @@
 
     <h1 class="heading-title">our packages</h1>
     <div class="box-container">
-        <div class="box">
-            <div class="image">
-                <img src="https://crystalcruises.com/_next/image?url=https%3A%2F%2Fcdn.crystalcruises.com%2Fimages%2Fscp71evy%2Fproduction%2F23882ff3efd3b59a52be5f0ebbc01c011deb71ed-5065x3299.jpg&w=1920&q=75" alt="">
-            </div>
-            <div class="content">
-                <h2>THE AMERICAS & CARIBBEAN</h2>
-                <h3>Fort Lauderdale -> Fort Lauderdale</h3>
-                <p>11 NIGHTS</p>
-                <div class="time">
-                    <div class="time-detail">
-                        <label><b>DEPART</b></label>
-                        <p>DEC 18, 2024</p>
-                    </div>
-                    <div class="time-detail">
-                        <label><b>ARRIVE</b></label>
-                        <p>DEC 29, 2024</p>
-                    </div>
-                </div>
-                <p><b> FARES FROM $5,600  PER GUEST </b></p>
-                <label>SHIP </label>
-                <p class="bottom-content"><b>CRYSTAL SERENITY</b></p>
-                
-            </div>
-            <a href="detail.php" class="btn">Detail</a>
-        </div>
+    <?php 
+        require_once 'index.php';
+        if(isset($_GET['id'])) {
+            $type = $_GET['id'];
+            $datalist = $conn->prepare("SELECT Package_name,From_location,To_location, Package_img, Depart, Arrive, Night, Price, Hotel, package_id FROM package_detail WHERE Type = :type");
+            $datalist->bindParam(':type', $type); 
+        } else {
+            $datalist = $conn->prepare("SELECT Package_name,From_location,To_location, Package_img, Depart, Arrive, Night, Price, Hotel, package_id FROM package_detail");
+        }
 
-        <div class="box">
-            <div class="image">
-                <img src="https://crystalcruises.com/_next/image?url=https%3A%2F%2Fcdn.crystalcruises.com%2Fimages%2Fscp71evy%2Fproduction%2F6f7412a84941262c16901a0c260834de45cc1597-5041x3361.jpg&w=1920&q=75" alt="">
-            </div>
-            <div class="content">
-                <h2>AFRICA & INDIAN OCEAN</h2>
-                <h3>Tema -> Las Palmas, Gran Canaria</h3>
-                <p>11 NIGHTS</p>
-                <div class="time">
-                    <div class="time-detail">
-                        <label><b>DEPART</b></label>
-                        <p>MAY 16, 2024</p>
+        $datalist->execute();
+        $packages = $datalist->fetchAll(PDO::FETCH_ASSOC);
+        foreach ($packages as $pack) {
+            echo '
+                <div class="box">
+                    <div class="image">
+                        <img src="' . $pack['Package_img'] . '" alt="">
                     </div>
-                    <div class="time-detail">
-                        <label><b>ARRIVE</b></label>
-                        <p> MAY 27, 2024</p>
+                    <div class="content">
+                        <h2>' . $pack['Package_name'] . '</h2>
+                        <h3>' . $pack['From_location'] . ' -> ' . $pack['To_location'] . '</h3>
+                        <p>' . $pack['Night'] . ' NIGHTS</p>
+                        <div class="time">
+                            <div class="time-detail">
+                                <label><b>DEPART</b></label>
+                                <p>' . $pack['Depart'] . '</p>
+                            </div>
+                            <div class="time-detail">
+                                <label><b>ARRIVE</b></label>
+                                <p>' . $pack['Arrive'] . '</p>
+                            </div>
+                        </div>
+                        <p><b> FARES FROM $' . $pack['Price'] . ' PER GUEST </b></p>
+                        <label>HOTEL</label>
+                        <p class="bottom-content"><b>' . $pack['Hotel'] . '</b></p>
                     </div>
+                    <a href="detail.php?id=' . $pack['package_id'] . '" class="btn">Detail</a>
                 </div>
-                <p><b> FARES FROM $6,900  PER GUEST</b></p>
-                <label>SHIP </label>
-                <p class="bottom-content"><b>CRYSTAL SERENITY</b></p>
-            </div>
-            <a href="detail.php" class="btn">Detail</a>
-        </div>
+            ';
+        }
+    ?>
 
-        <div class="box">
-            <div class="image">
-                <img src="https://crystalcruises.com/_next/image?url=https%3A%2F%2Fcdn.crystalcruises.com%2Fimages%2Fscp71evy%2Fproduction%2F14611525b96a1810e6cb2041d0351a8835ada8b3-4256x2832.jpg%3Frect%3D0%2C1177%2C4256%2C1647&w=1920&q=75" alt="">
-            </div>
-            <div class="content">
-                <h2>ASIA</h2>
-                <h3>Singapore -> Singapore</h3>
-                <p>47 NIGHTS</p>
-                <div class="time">
-                    <div class="time-detail">
-                        <label><b>DEPART</b></label>
-                        <p>JAN 18, 2025</p>
-                    </div>
-                        <div class="time-detail">
-                        <label><b>ARRIVE</b></label>
-                        <p>MAR 06, 2025</p>
-                    </div>
-                </div>
-                    <p><b> FARES FROM $30,700  PER GUEST</b></p>
-                    <label>SHIP </label>
-                    <p class="bottom-content"><b>CRYSTAL SERENITY</b></p>
-            </div>
-                <a href="detail.php" class="btn">Detail</a>
-        </div>
-
-        <div class="box">
-            <div class="image">
-                <img src="https://crystalcruises.com/_next/image?url=https%3A%2F%2Fcdn.crystalcruises.com%2Fimages%2Fscp71evy%2Fproduction%2F23882ff3efd3b59a52be5f0ebbc01c011deb71ed-5065x3299.jpg&w=1920&q=75" alt="">
-            </div>
-            <div class="content">
-                <h2>THE AMERICAS & CARIBBEAN</h2>
-                <h3>Fort Lauderdale -> Fort Lauderdale</h3>
-                <p>11 NIGHTS</p>
-                <div class="time">
-                    <div class="time-detail">
-                        <label><b>DEPART</b></label>
-                        <p>DEC 18, 2024</p>
-                    </div>
-                    <div class="time-detail">
-                        <label><b>ARRIVE</b></label>
-                        <p>DEC 29, 2024</p>
-                    </div>
-                </div>
-                <p><b> FARES FROM $5,600  PER GUEST </b></p>
-                <label>SHIP </label>
-                <p class="bottom-content"><b>CRYSTAL SERENITY</b></p>
-                
-            </div>
-            <a href="detail.php" class="btn">Detail</a>
-        </div>
-
-        <div class="box">
-            <div class="image">
-                <img src="https://crystalcruises.com/_next/image?url=https%3A%2F%2Fcdn.crystalcruises.com%2Fimages%2Fscp71evy%2Fproduction%2F6f7412a84941262c16901a0c260834de45cc1597-5041x3361.jpg&w=1920&q=75" alt="">
-            </div>
-            <div class="content">
-                <h2>AFRICA & INDIAN OCEAN</h2>
-                <h3>Tema -> Las Palmas, Gran Canaria</h3>
-                <p>11 NIGHTS</p>
-                <div class="time">
-                    <div class="time-detail">
-                        <label><b>DEPART</b></label>
-                        <p>MAY 16, 2024</p>
-                    </div>
-                    <div class="time-detail">
-                        <label><b>ARRIVE</b></label>
-                        <p> MAY 27, 2024</p>
-                    </div>
-                </div>
-                <p><b> FARES FROM $6,900  PER GUEST</b></p>
-                <label>SHIP </label>
-                <p class="bottom-content"><b>CRYSTAL SERENITY</b></p>
-            </div>
-            <a href="detail.php" class="btn">Detail</a>
-        </div>
-
-        <div class="box">
-            <div class="image">
-                <img src="https://crystalcruises.com/_next/image?url=https%3A%2F%2Fcdn.crystalcruises.com%2Fimages%2Fscp71evy%2Fproduction%2F14611525b96a1810e6cb2041d0351a8835ada8b3-4256x2832.jpg%3Frect%3D0%2C1177%2C4256%2C1647&w=1920&q=75" alt="">
-            </div>
-            <div class="content">
-                <h2>ASIA</h2>
-                <h3>Singapore -> Singapore</h3>
-                <p>47 NIGHTS</p>
-                <div class="time">
-                    <div class="time-detail">
-                        <label><b>DEPART</b></label>
-                        <p>JAN 18, 2025</p>
-                    </div>
-                        <div class="time-detail">
-                        <label><b>ARRIVE</b></label>
-                        <p>MAR 06, 2025</p>
-                    </div>
-                </div>
-                    <p><b> FARES FROM $30,700  PER GUEST</b></p>
-                    <label>SHIP </label>
-                    <p class="bottom-content"><b>CRYSTAL SERENITY</b></p>
-            </div>
-                <a href="detail.php" class="btn">Detail</a>
-        </div>
-
-        <div class="box">
-            <div class="image">
-                <img src="https://crystalcruises.com/_next/image?url=https%3A%2F%2Fcdn.crystalcruises.com%2Fimages%2Fscp71evy%2Fproduction%2F23882ff3efd3b59a52be5f0ebbc01c011deb71ed-5065x3299.jpg&w=1920&q=75" alt="">
-            </div>
-            <div class="content">
-                <h2>THE AMERICAS & CARIBBEAN</h2>
-                <h3>Fort Lauderdale -> Fort Lauderdale</h3>
-                <p>11 NIGHTS</p>
-                <div class="time">
-                    <div class="time-detail">
-                        <label><b>DEPART</b></label>
-                        <p>DEC 18, 2024</p>
-                    </div>
-                    <div class="time-detail">
-                        <label><b>ARRIVE</b></label>
-                        <p>DEC 29, 2024</p>
-                    </div>
-                </div>
-                <p><b> FARES FROM $5,600  PER GUEST </b></p>
-                <label>SHIP </label>
-                <p class="bottom-content"><b>CRYSTAL SERENITY</b></p>
-                
-            </div>
-            <a href="detail.php" class="btn">Detail</a>
-        </div>
-
-        <div class="box">
-            <div class="image">
-                <img src="https://crystalcruises.com/_next/image?url=https%3A%2F%2Fcdn.crystalcruises.com%2Fimages%2Fscp71evy%2Fproduction%2F6f7412a84941262c16901a0c260834de45cc1597-5041x3361.jpg&w=1920&q=75" alt="">
-            </div>
-            <div class="content">
-                <h2>AFRICA & INDIAN OCEAN</h2>
-                <h3>Tema -> Las Palmas, Gran Canaria</h3>
-                <p>11 NIGHTS</p>
-                <div class="time">
-                    <div class="time-detail">
-                        <label><b>DEPART</b></label>
-                        <p>MAY 16, 2024</p>
-                    </div>
-                    <div class="time-detail">
-                        <label><b>ARRIVE</b></label>
-                        <p> MAY 27, 2024</p>
-                    </div>
-                </div>
-                <p><b> FARES FROM $6,900  PER GUEST</b></p>
-                <label>SHIP </label>
-                <p class="bottom-content"><b>CRYSTAL SERENITY</b></p>
-            </div>
-            <a href="detail.php" class="btn">Detail</a>
-        </div>
-
-        <div class="box">
-            <div class="image">
-                <img src="https://crystalcruises.com/_next/image?url=https%3A%2F%2Fcdn.crystalcruises.com%2Fimages%2Fscp71evy%2Fproduction%2F14611525b96a1810e6cb2041d0351a8835ada8b3-4256x2832.jpg%3Frect%3D0%2C1177%2C4256%2C1647&w=1920&q=75" alt="">
-            </div>
-            <div class="content">
-                <h2>ASIA</h2>
-                <h3>Singapore -> Singapore</h3>
-                <p>47 NIGHTS</p>
-                <div class="time">
-                    <div class="time-detail">
-                        <label><b>DEPART</b></label>
-                        <p>JAN 18, 2025</p>
-                    </div>
-                        <div class="time-detail">
-                        <label><b>ARRIVE</b></label>
-                        <p>MAR 06, 2025</p>
-                    </div>
-                </div>
-                    <p><b> FARES FROM $30,700  PER GUEST</b></p>
-                    <label>SHIP </label>
-                    <p class="bottom-content"><b>CRYSTAL SERENITY</b></p>
-            </div>
-                <a href="detail.php" class="btn">Detail</a>
-        </div>
-
-        <div class="box">
-            <div class="image">
-                <img src="https://crystalcruises.com/_next/image?url=https%3A%2F%2Fcdn.crystalcruises.com%2Fimages%2Fscp71evy%2Fproduction%2F23882ff3efd3b59a52be5f0ebbc01c011deb71ed-5065x3299.jpg&w=1920&q=75" alt="">
-            </div>
-            <div class="content">
-                <h2>THE AMERICAS & CARIBBEAN</h2>
-                <h3>Fort Lauderdale -> Fort Lauderdale</h3>
-                <p>11 NIGHTS</p>
-                <div class="time">
-                    <div class="time-detail">
-                        <label><b>DEPART</b></label>
-                        <p>DEC 18, 2024</p>
-                    </div>
-                    <div class="time-detail">
-                        <label><b>ARRIVE</b></label>
-                        <p>DEC 29, 2024</p>
-                    </div>
-                </div>
-                <p><b> FARES FROM $5,600  PER GUEST </b></p>
-                <label>SHIP </label>
-                <p class="bottom-content"><b>CRYSTAL SERENITY</b></p>
-                
-            </div>
-            <a href="detail.php" class="btn">Detail</a>
-        </div>
-
-        <div class="box">
-            <div class="image">
-                <img src="https://crystalcruises.com/_next/image?url=https%3A%2F%2Fcdn.crystalcruises.com%2Fimages%2Fscp71evy%2Fproduction%2F6f7412a84941262c16901a0c260834de45cc1597-5041x3361.jpg&w=1920&q=75" alt="">
-            </div>
-            <div class="content">
-                <h2>AFRICA & INDIAN OCEAN</h2>
-                <h3>Tema -> Las Palmas, Gran Canaria</h3>
-                <p>11 NIGHTS</p>
-                <div class="time">
-                    <div class="time-detail">
-                        <label><b>DEPART</b></label>
-                        <p>MAY 16, 2024</p>
-                    </div>
-                    <div class="time-detail">
-                        <label><b>ARRIVE</b></label>
-                        <p> MAY 27, 2024</p>
-                    </div>
-                </div>
-                <p><b> FARES FROM $6,900  PER GUEST</b></p>
-                <label>SHIP </label>
-                <p class="bottom-content"><b>CRYSTAL SERENITY</b></p>
-            </div>
-            <a href="detail.php" class="btn">Detail</a>
-        </div>
-
-        <div class="box">
-            <div class="image">
-                <img src="https://crystalcruises.com/_next/image?url=https%3A%2F%2Fcdn.crystalcruises.com%2Fimages%2Fscp71evy%2Fproduction%2F14611525b96a1810e6cb2041d0351a8835ada8b3-4256x2832.jpg%3Frect%3D0%2C1177%2C4256%2C1647&w=1920&q=75" alt="">
-            </div>
-            <div class="content">
-                <h2>ASIA</h2>
-                <h3>Singapore -> Singapore</h3>
-                <p>47 NIGHTS</p>
-                <div class="time">
-                    <div class="time-detail">
-                        <label><b>DEPART</b></label>
-                        <p>JAN 18, 2025</p>
-                    </div>
-                        <div class="time-detail">
-                        <label><b>ARRIVE</b></label>
-                        <p>MAR 06, 2025</p>
-                    </div>
-                </div>
-                    <p><b> FARES FROM $30,700  PER GUEST</b></p>
-                    <label>SHIP </label>
-                    <p class="bottom-content"><b>CRYSTAL SERENITY</b></p>
-            </div>
-                <a href="detail.php" class="btn">Detail</a>
-        </div>
     
         
     </div>

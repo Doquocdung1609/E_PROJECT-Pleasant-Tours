@@ -61,8 +61,15 @@ a{
 }
 
 .detail-content img {
-    width: 200px;
-    margin-right: 20px; /* Adjust as needed */
+    width: 400px; 
+    margin-right: 20px; 
+}
+
+.detail tr td p{
+    font-size: 20px;
+    white-space: normal;
+    word-break: break-word; 
+    text-transform: none;
 }
 
 
@@ -85,6 +92,7 @@ a{
     margin: 0 !important; 
     padding: 70px;
     padding-top: 100px;
+    padding-bottom: 0px;
 }
 
 .table p{
@@ -95,8 +103,12 @@ a{
     font-size: 20px;
 }
 
-.detail tbody tr td{
+.detail tr td{
     font-size: 20px;
+    width: 150px; /* Set the width of the <td> */
+    white-space: nowrap; /* Prevent content from wrapping */
+    overflow: hidden; /* Hide any content that overflows the fixed width */
+    text-overflow: ellipsis; /* Display an ellipsis (...) to indicate overflow */
 }
 
 .table h1{
@@ -107,6 +119,25 @@ a{
 .row{
     padding-top: 90px;
 }
+
+a.btn{
+    width: 150px;
+    display: block;
+    text-align: center;
+    margin: 0 auto;
+    background: var(--black);
+    color: var(--white);
+    font-size: 1.7rem;
+    padding: 1rem;
+    cursor: pointer;
+    margin-bottom: 100px;
+    margin-top: 0px;
+}
+
+a.btn:hover{
+    background: var(--main-color);
+}
+
 
 
 
@@ -290,6 +321,9 @@ section{
     .home .slide .content h3{
         font-size: 10vw;
     }
+     body{
+        display: block;
+    }
 
 }
 
@@ -323,16 +357,106 @@ section{
         text-align: center;
     }
 
+    body{
+        display: block;
+    }
+
+    .table {
+        margin: 0 !important;
+        padding: 2rem;
+        padding-top: 4rem; 
+        padding-bottom: 0px;
+        overflow-x: auto; 
+    }
+    
+    .table h1 {
+        font-size: 3rem; 
+        text-align: center;
+    }
+    
+    .table p,
+    .table label,
+    .detail tr td {
+        font-size: 10px;
+        width: 400px; /* Set the width of the <td> */
+    white-space: nowrap; /* Prevent content from wrapping */
+    overflow: hidden; /* Hide any content that overflows the fixed width */
+    text-overflow: ellipsis; /* Display an ellipsis (...) to indicate overflow */
+    }
+
+
+    .detail-content img{
+        width: 300px;
+        margin-bottom: 20px;
+    }
+
+    .detail-content .content-wrapper{
+        display: block;
+    }
+    
+
+  
+
+    .detail tr td p{
+        font-size: 10px;
+        white-space: normal; /* Allow the content to wrap */
+    word-break: break-word;
+    }
+    
+
+    
+    .row {
+        padding-top: 3rem; 
+    }
+    
+    a.btn {
+        width: 120px;
+        font-size: 1.4rem;
+        padding: 0.8rem;
+        margin-bottom: 3rem; 
+    }
+
+    
+
+    .top {
+        display: block;
+        text-align: center; 
+    }
+
+    .top .image img {
+        width: 100%; 
+        height: auto; 
+    }
+
+    .top .content {
+        padding: 1rem; 
+    }
+
+ 
+    .top h2 {
+        font-size: 3rem;
+    }
+
+    .top h3, .top p, .top label {
+        font-size: 2rem;
+    }
+
+    .top p, .top label {
+        margin: 0.5rem 0;
+    }
 
 }
 
 @media (max-width:450px){
-    html{
+    body{
+        display: block;
         font-size: 50%;
     }
 
     .heading-title{
         font-size: 3.5rem;
     }
+
+    
 
 }

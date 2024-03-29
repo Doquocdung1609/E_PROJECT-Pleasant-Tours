@@ -2,7 +2,7 @@
     
     $host = "localhost";
     $port = "3306"; // Separate port from host
-    $database = "bt2276";
+    $database = "project";
     $username = "root";
     $password = "";
     

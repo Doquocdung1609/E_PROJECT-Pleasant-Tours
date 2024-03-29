@@ -25,14 +25,12 @@
             <li class="dropdown-divider"></li>
             <li><a class="dropdown-item" href="ViewPackageAdmin.php">View Package</a></li>
             <li><a class="dropdown-item" href="Addpackage.php">Add Package</a></li>
+            <li><a class="dropdown-item" href="customer.php">Add Customer</a></li>
         </ul>
     </div>  
     
 </div>
-    <form class="d-flex" >
-      <input class="form-control me-2" type="search" placeholder="Search for" aria-label="Search" style="margin-right:15px">
-      <button class="btn btn-outline-success" type="submit" style="margin-right:15px">Search</button> 
-    </form>
+    <a href="home.php" class="btn btn-danger float-end">Log out</a>
 </div>
 </nav>
 
@@ -43,7 +41,7 @@
     </ol>
     
     <div class="row" >
-        <div class="col-xl-3 col-md-6">
+        <div class="col-xl-4 col-md-6">
             <div class="card bg-primary text-white mb-4">
                 <div class="card-body">Package</div>
                 <div class="card-footer d-flex align-item-center justify-content-between">
@@ -52,7 +50,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-xl-3 col-md-6">
+        <div class="col-xl-4 col-md-6">
             <div class="card bg-warning text-white mb-4">
                 <div class="card-body">Add Package</div>
                 <div class="card-footer d-flex align-item-center justify-content-between">
@@ -61,20 +59,11 @@
                 </div>
             </div>
         </div>     
-        <div class="col-xl-3 col-md-6">
+        <div class="col-xl-4 col-md-6">
             <div class="card bg-success text-white mb-4">
-                <div class="card-body">Primary Card</div>
+                <div class="card-body">Customer</div>
                 <div class="card-footer d-flex align-item-center justify-content-between">
-                    <a class="small text-white" href="#">View Details</a>
-                    <div class="small text-white"><i class="fas fa-angle-right"></i></div>
-                </div>
-            </div>
-        </div>
-        <div class="col-xl-3 col-md-6">
-            <div class="card bg-danger text-white mb-4">
-                <div class="card-body">Primary Card</div>
-                <div class="card-footer d-flex align-item-center justify-content-between">
-                    <a class="small text-white" href="#">View Details</a>
+                    <a class="small text-white" href="customer.php">View Details</a>
                     <div class="small text-white"><i class="fas fa-angle-right"></i></div>
                 </div>
             </div>

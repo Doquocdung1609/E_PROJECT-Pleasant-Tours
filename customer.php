@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -31,7 +30,7 @@
     </div>  
     
 </div>
-  
+   
 </div>
 </nav>
 
@@ -39,56 +38,47 @@
     <h4 class="mt-4">Package</h4>
     <ol class="breadcrumb mb-4">
         <li class="breadcrumb-item active">Dashboard</li>
-        <li class="breadcrumb-item">Package</li>
+        <li class="breadcrumb-item">Customer</li>
     </ol>
     <div class="row">
         <div class="col-md-12">
             <div class="card">
                 <div class="card-header">
-                    <h4>View Package</h4>
+                    <h4>View Customer</h4>
                 </div>
                 <div class="card-body">
                     <table class="table table-bordered">
                         <thead>
                             <tr>
                                 <th>ID</th>
-                                <th>Name</th>
-                                <th>Img</th>
-                                <th>Night</th>
-                                <th>From_location</th>
-                                <th>To_location</th>
-                                <th>Depart</th>
+                                <th>FullName</th>
+                                <th>Email</th>
+                                <th>Phone</th>
+                                <th>Address</th>
+                                <th>Guests</th>
+                                <th>Package Name</th>
                                 <th>Arrive</th>
-                                <th>Price</th>
-                                <th>Type</th>
-                                <th>Hotel</th>
-                                <th>Package Detail</th>
-                                <th>edit</th>
-                                <th>delete</th>
+                                <th>Leaving</th>
                             </tr>
                         </thead>
                         
                         <?php 
                             include_once('index.php');
-                            $datalist = $conn->prepare("SELECT Package_ID,Package_name,Package_img,Night,From_location,To_location,Depart,Arrive,Price,Type,Hotel FROM package_detail");
+                            $datalist = $conn->prepare("SELECT books.ID,books.FullName,books.Email,books.Phone,books.Address,books.Guests,package_detail.Package_name,package_detail.Arrive,package_detail.Depart FROM package_detail JOIN books ON package_detail.Package_ID = books.Package_ID;");
                             $datalist->execute();
                             $users = $datalist->fetchAll(PDO::FETCH_ASSOC);
                             foreach ($users as $user) {
                                 echo "
                                 <tr>
-                                    <td>" . $user['Package_ID'] . "</td>
-                                    <td>" . $user['Package_name']."</td>
-                                    <td>  <img style='width: 300px; height: 200px; ' src='" . $user['Package_img'] . "' alt=''> </td>                                    <td>" . $user['Night'] . "</td>
-                                    <td>" . $user['From_location'] . "</td>
-                                    <td>" . $user['To_location'] . "</td>
+                                    <td>" . $user['ID'] . "</td>
+                                    <td>" . $user['FullName'] . "</td>
+                                    <td>" . $user['Email']."</td>
+                                    <td>" . $user['Phone'] . "</td>
+                                    <td>" . $user['Address'] . "</td>
+                                    <td>" . $user['Guests'] . "</td>
+                                    <td>" . $user['Package_name'] . "</td>
                                     <td>" . $user['Depart'] . "</td>
                                     <td>" . $user['Arrive'] . "</td>
-                                    <td>" . $user['Price'] . "</td>
-                                    <td>" . $user['Type'] . "</td>
-                                    <td>" . $user['Hotel'] . "</td>
-                                    <td><a href='Viewpackage_detail.php?id=".$user['Package_ID']."'><button class='btn btn-success'>DETAIL</button></a></td>
-                                    <td><a href='edit.php?id=".$user['Package_ID']."'><button class='btn btn-warning'>EDIT</button></a></td>
-                                    <td><a href='delete.php?id=".$user['Package_ID']."'><button class='btn btn-danger'>DELETE</button></a></td>     
                                 </tr>";
                             };
                         ?>

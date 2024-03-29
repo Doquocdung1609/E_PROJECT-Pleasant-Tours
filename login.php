@@ -1,3 +1,35 @@
+<?php
+include_once('index.php');
+if(!empty($_POST)){
+try {
+    // Lấy dữ liệu từ form
+    $email = $_POST['email'];
+    $password = $_POST['password'];
+
+    // Tạo câu truy vấn sử dụng PDO
+    $stmt = $conn->prepare("SELECT * FROM admin WHERE Email = :email AND Password = :password");
+    $stmt->bindParam(':email', $email);
+    $stmt->bindParam(':password', $password);
+    $stmt->execute();
+
+    // Đếm số hàng trả về từ câu truy vấn
+    $count = $stmt->rowCount();
+
+    // Nếu có dữ liệu tương ứng, chuyển hướng đến trang Dashboard.php
+    if ($count == 1) {
+        header("Location: Dashboard.php");
+        exit();
+    } else {
+        header("Location: Loginfail.php");
+    }
+} catch(PDOException $e) {
+    echo "Error: " . $e->getMessage();
+}
+}
+// Đóng kết nối
+$conn = null;
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -30,7 +62,7 @@
 
     <!-- Sign Up Form -->
     <div class="form-container sign-up-container">
-      <form action="#">
+      <form action="register.php" method="POST">
         <h1>Create Account</h1>
         <div class="social-container">
           <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
@@ -38,16 +70,16 @@
           <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
         </div>
         <span>or Use Your Email For Registration</span>
-        <input type="text" placeholder="Name" required />
-        <input type="email" placeholder="Email" required />
-        <input type="password" placeholder="Password" required />
-        <button>Sign Up</button>
+        <input type="text" id="name" name="name" placeholder="Name" required />
+        <input type="email" id="email" name="email" placeholder="Email" required />
+        <input type="password" id="password" name="password" placeholder="Password" required />
+        <button type="submit">Sign Up</button>
       </form>
     </div>
 
     <!-- Sign in Form -->
     <div class="form-container sign-in-container">
-      <form action="#">
+      <form action="" method="POST">
         <h1>Sign in</h1>
         <div class="social-container">
           <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
@@ -55,10 +87,9 @@
           <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
         </div>
         <span>or Use Your Account</span>
-        <input type="email" placeholder="Email" required />
-        <input type="password" placeholder="Password" required />
-        <a href="#">Forgot your password?</a>
-        <button><a href="Dashboard.php" style="color: #ffffff;">Sign In</a></button>
+        <input type="email" id="email" name="email" placeholder="Email" required />
+        <input type="password" id="password" name="password" placeholder="Password" required />
+        <button type="submit">Sign In</button>
       </form>
     </div>
 

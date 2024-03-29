@@ -521,11 +521,11 @@ section{
 }
 
 .about .image img{
-    width: 108%;
+    width: 104%;
 }
 
 .about .content{
-    flex: 1 1 37rem;
+    flex: 1 1 38rem;
     padding: 3rem;
     background: var(--light-bg);
 }
@@ -543,6 +543,63 @@ section{
     line-height: 2;
     color: var(--black);
 }
+
+.contact{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.contact .address {
+    display: flex;
+    width: 100%;
+}
+
+.contact .address .contact-detail{
+    display: block;
+    margin-left: 50px;
+}
+
+.contact .address .contact-detail a{
+    font-size: 15px;
+    display: block;
+    margin-bottom: 20px;
+}
+
+.contact .address .contact-detail .email{
+    cursor: pointer;
+}
+
+.contact h1{
+    text-align: center;
+    font-size: 30px;
+}
+
+.contact h2{
+    font-size: 15px;
+}
+
+
+
+
+
+
+.booking .book-form .flex .inputBox select {
+    width: 100%;
+    padding:1.2rem 1.4rem;
+    font-size: 1.6rem;
+    color:var(--light-black);
+    text-transform: none;
+    margin-top: 1.5rem;
+    border: var(--border);
+}
+
+
+
+
+
+
+
 
 
 
@@ -749,7 +806,7 @@ section{
 
 @media (max-width:450px){
     html{
-        font-size: 50%;
+        font-size: 50%; 
     }
 
     .heading-title{

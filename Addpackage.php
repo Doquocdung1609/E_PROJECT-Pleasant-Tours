@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -25,13 +26,11 @@
             <li class="dropdown-divider"></li>
             <li><a class="dropdown-item" href="ViewPackageAdmin.php">View Package</a></li>
             <li><a class="dropdown-item" href="Addpackage.php">Add Package</a></li>
+            <li><a class="dropdown-item" href="customer.php">Add Customer</a></li>
         </ul>
     </div>  
     </div>
-    <form class="d-flex" >
-      <input class="form-control me-2" type="search" placeholder="Search for" aria-label="Search" style="margin-right:15px">
-      <button class="btn btn-outline-success" type="submit" style="margin-right:15px">Search</button> 
-    </form>
+    
 </div>
 </nav>
 <div class="container">
@@ -44,14 +43,39 @@
                     </h3>
                 </div>
                 <div class="card-body">
-                    <form action="add.php" method="post">
-                        <div class="mb-3">
-                            <label>Full Name</label>
-                            <input required type="text" name="fullname">
-                        </div>
+                    <form action="add.php" method="POST">
+                        <div class="row">
+                        <div class="col-sm-2">Name</div>
+                        <div class="col-sm-4"><input type="text" name="package_name" value=""></div>
                         
+                        <div class="col-sm-2">Img</div>
+                        <div class="col-sm-4"><input type="text" name="package_img" value=""></div> 
+                        
+                        <div class="col-sm-2">From_location</div>
+                        <div class="col-sm-4"><input type="text" name="From_location" value=""></div>
+                        
+                        <div class="col-sm-2">To_Location</div>
+                        <div class="col-sm-4"><input type="text" name="To_location" value=""></div>
+                            
+                        <div class="col-sm-2">Depart</div>
+                        <div class="col-sm-4"><input type="date" name="Depart" value=""></div> 
+
+                        <div class="col-sm-2">Arrive</div>
+                        <div class="col-sm-4"><input type="date" name="Arrive" value=""></div> 
+
+                        <div class="col-sm-2">Price</div>
+                        <div class="col-sm-4"><input type="text" name="Price" value=""></div>
+                        
+                        <div class="col-sm-2">Type</div>
+                        <div class="col-sm-4"><input type="text" name="Type" value=""></div> 
+
+                        <div class="col-sm-2">Night</div>
+                        <div class="col-sm-4"><input type="number" name="Night" value="" ></div> 
+
+                        <div class="col-sm-2">Hotel</div>
+                        <div class="col-sm-4"><input type="text" name="Hotel" value=""></div> 
                         <div class="form-group">
-                            <button type="submit" class="btn btn-success">Add</button>
+                            <button type="submit" value="submit" name="add" class="btn btn-success">Add</button>
                             <button type="reset" class="btn btn-warning">Reset</button>
                         </div>
                     </form>
@@ -60,3 +84,4 @@
         </div>
     </div>
 </div>
+

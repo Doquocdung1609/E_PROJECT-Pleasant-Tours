@@ -108,11 +108,14 @@ button:hover{
 /* Style Input Fields */
 input {
     background-color: #eee;
+    text-transform: none;
     border: none;
     padding: 12px 15px;
     margin: 8px 0;
     width: 100%;
 }
+
+
 
 /* Set motion Keyframes */
 @keyframes show {
@@ -392,6 +395,7 @@ section{
         font-size: 10vw;
     }
 
+
 }
 
 @media (max-width:768px){
@@ -422,6 +426,13 @@ section{
         display: block;
         margin: 2rem;
         text-align: center;
+    }
+
+    h1{
+        font-size: 20px;
+    }
+    .social-container{
+        display: flex;
     }
 
 

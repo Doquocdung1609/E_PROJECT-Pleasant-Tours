@@ -1,51 +1,36 @@
-<!-- <?php
-if(isset($_POST['send'])) {
-    $name = $_POST["name"];
-    $email = $_POST["email"];
-    $phone = $_POST["phone"];
-    $address = $_POST["address"];
-    $location = $_POST["location"];
-    $guests = $_POST["guests"];
-    $arrivals = $_POST["arrivals"];
-    $leaving = $_POST["leaving"];
-
-
-$conn=mysqli_connect("localhost:3306","root","","project");
-mysqli_set_charset($conn,"utf8");
-
-$sql="insert into book (Name,Email,Phone,Address,Where_to,People,Arrival,Leaving) values ('$name','$email','$phone','$address','$location','$guests','$arrivals','$leaving')";
-
-mysqli_query($conn, $sql);
-
-header("location:book.php");
-}
-else {
-    echo 'ERROR! Please try again.';
-}
-
-?> -->
 <?php
 session_start(); 
 
 if(isset($_POST['send'])){
+
     $name = $_POST["name"];
     $email = $_POST["email"];
     $phone = $_POST["phone"];
     $address = $_POST["address"];
-    $location = $_POST["location"];
     $guests = $_POST["guests"];
-    $arrivals = $_POST["arrivals"];
-    $leaving = $_POST["leaving"];
+    $package_name = $_POST['package_name'];
 
-    $conn = new PDO("mysql:host=localhost3306;dbname=project", "root", "");
+    $conn = new PDO("mysql:host=localhost;dbname=project", "root", "");
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     $conn->exec("SET CHARACTER SET utf8");
 
-    $stmt = $conn->prepare("INSERT INTO book (Name, Email, Phone, Address, Where_to, People, Arrival, Leaving) VALUES ('$name','$email','$phone','$address','$location','$guests','$arrivals','$leaving')");
-    $stmt->execute([$name, $email, $phone, $address, $location, $guests, $arrivals, $leaving]);
+    $stmt = $conn->prepare("SELECT Package_ID FROM package_detail WHERE Package_name = :package_name");
+    $stmt->bindParam(':package_name', $package_name, PDO::PARAM_STR);
+    $stmt->execute();
+    $package_id = $stmt->fetchColumn();
+    
+    $stmt = $conn->prepare("INSERT INTO books (Package_ID, Package_name, FullName, Email, Phone, Address, Guests) VALUES (:package_id, :package_name, :name, :email, :phone, :address, :guests)");
+    $stmt->bindParam(':package_id', $package_id, PDO::PARAM_INT);
+    $stmt->bindParam(':package_name', $package_name, PDO::PARAM_STR);
+    $stmt->bindParam(':name', $name, PDO::PARAM_STR);
+    $stmt->bindParam(':email', $email, PDO::PARAM_STR);
+    $stmt->bindParam(':phone', $phone, PDO::PARAM_STR);
+    $stmt->bindParam(':address', $address, PDO::PARAM_STR);
+    $stmt->bindParam(':guests', $guests, PDO::PARAM_INT);
+    $stmt->execute();
+
 
     header("Location: thank.php");
-    exit();
 } else {
     echo 'ERROR! Please try again.';
 }

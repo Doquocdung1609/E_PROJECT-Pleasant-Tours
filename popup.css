@@ -1,0 +1,50 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: url('https://crystalcruises.com/_next/image?url=https%3A%2F%2Fcdn.crystalcruises.com%2Fimages%2Fscp71evy%2Fproduction%2F12d8266c26f2c2179d8222f3b42d870d33bd7b75-3725x3725.jpg%3Frect%3D0%2C386%2C3725%2C2954%26w%3D1000%26h%3D793%26auto%3Dformat&w=1440&q=75') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.thank .popup {
+    width: 800px;
+    background: #fff;
+    border-radius: 6px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%) scale(1);
+    text-align: center;
+    padding:0 30px 30px;
+    color: #333;
+}
+
+.thank .popup h2{
+    font-size: 50px;
+    font-weight: 500;
+    margin: 30px 0 10px;
+}
+
+.thank .popup p{
+    font-size: 20px;
+}
+
+.thank .popup button {
+    width: 100%;
+    margin-top: 50px;
+    padding: 10px 0;
+    background: #6fd649;
+    color: #fff;
+    border: 0;
+    outline: none;
+    font-size: 18px;
+    border-radius: 4px;
+    cursor:pointer;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+}

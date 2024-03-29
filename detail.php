@@ -26,55 +26,88 @@
 <!-- home section start -->
 
 <section class="top">
-    <div class="image">
-        <img src="https://crystalcruises.com/_next/image?url=https%3A%2F%2Fcdn.crystalcruises.com%2Fimages%2Fscp71evy%2Fproduction%2F9a3236f4ed68c4d565d964ade0e79187298b2d62-4000x2667.jpg%3Frect%3D1090%2C0%2C2910%2C2667%26w%3D1920%26auto%3Dformat&w=1920&q=75" alt="">
-    </div>
-
-    <div class="content">
-        <h2>AUSTRALIA & NEW ZEALAND</h2>
-        <h3>Auckland Fremantle (Perth)</h3>
-        <p><b>18 NIGHTS</b></p>
-        <label>DATES </label>
-        <p><b>MAR 09, 2024  MAR 27, 2024</b></p>
-        <label>FARES FROM </label>
-        <p><b>$11,700  PER GUEST *</b></p>
-        <label>SHIP </label>
-        <p><b>CRYSTAL SERENITY</b></p>
+    <?php
+    require_once 'index.php';
+    if(isset($_GET['id']) && !empty($_GET['id'])) {
+        $package_id = $_GET['id'];
+        $datalist = $conn->prepare("SELECT * FROM package_detail WHERE Package_ID = :package_id");
+        $datalist->bindParam(':package_id', $package_id); // corrected parameter name
+        $datalist->execute();
+        $packages = $datalist->fetchAll(PDO::FETCH_ASSOC);
         
+        // Check if any package is found
+        if($packages) {
+            foreach ($packages as $pack) {
+                echo '
+                <div class="image">
+                    <img src="' . $pack['Package_img'] . '" alt="">
+                </div>
+                <div class="content">
+                    <h2>' . $pack['Package_name'] . '</h2>
+                    <p><b>'. $pack['Night'] . ' NIGHTS</b></p>
+                    <label>DATES </label>
+                    <p><b>' . $pack['Depart'] . ' -> ' . $pack['Arrive'] . '</b></p>
+                    <label>FARES FROM </label>
+                    <p><b>FARES FROM $' . $pack['Price'] . ' PER GUEST</b></p>
+                    <label>HOTEL </label>
+                    <p><b>' . $pack['Hotel'] . '</b></p>
+                </div>';
+                echo' </section>';
 
-    </div>
+                echo'
+                <section class="table">;
 
-</section>
+                    <h1>VOYAGE ITINERARY</h1>';
+                echo'
+                    <div class="row">
+                    <div class="col-sm-3 p-5 my-5 border" >
+                        <div class="container mt-3">
+                            <p><b>'. $pack['Night'] . ' NIGHTS</b></p>
+                            <label>DESTINATION</label>
+                            <p><b>' . $pack['From_location'] . ' -> ' . $pack['To_location'] . '</b></p>
+                            
+                            <label>DATES</label>
+                            <p><b>' . $pack['Depart'] . ' -> ' . $pack['Arrive'] . '</b></p>
+                        </div>
+                    </div>
+                    <div class="col-sm-9 p-5 my-5 border">
+                ';
+            }
+        } else {
+            echo "No package found with the provided ID.";
+        }
+    } else {
+        echo "Package ID is missing.";
+    }
+?>
 
 
-<section class="table">
 
-    <h1>VOYAGE ITINERARY</h1>
+<?php 
+require_once 'index.php';
 
+if(isset($_GET['id']) && !empty($_GET['id'])) {
+    $package_id = $_GET['id'];
+    $datalist = $conn->prepare("SELECT * FROM location_detail WHERE Package_ID = :package_id");
+    $datalist->bindParam(':package_id', $package_id);
+    $datalist->execute();
+    $Location = $datalist->fetchAll(PDO::FETCH_ASSOC);
+}
 
-<div class="row">
-    <div class="col-sm-3 p-5 my-5 border" >
-        <div class="container mt-3">
-            <p><b>15 Night</b></p>
-            <label>DESTINATION</label>
-            <p><b>SINGAPORE -> MUMBAI</b></p>
-            
-            <label>DATES</label>
-            <p><b>MAR 12,2024-> MAR27,2024</b></p>
-        </div>
-    </div>
-    <div class="col-sm-9 p-5 my-5 border">
-
-    <table class="table detail">
-        <tbody>
+if(isset($Location) && $Location) {
+    $i = 0; // Initialize counter
+    foreach ($Location as $location) {
+        $i++; // Increment counter
+        echo '
+        <table class="table detail">
             <tr>
-                <td rowspan="2" style="margin:0; padding:29px">01</td>
-                <td colspan="3">Singapore</td>
-                <td rowspan="2" style="margin:0; padding:29px">MAR 12, 2024</td>
+                <td rowspan="2" style="margin:0; padding:29px">0'.$i.'</td>
+                <td colspan="3">' . $location['From_location'] . '</td>
+                <td rowspan="2" style="margin:0; padding:29px">' . $location['Date_depart'] . '</td>
                 <td rowspan="2" style="margin:0; padding:29px">Over Night</td>
                 <td rowspan="2" style="margin:0; padding:29px"></td>
                 <td rowspan="2" style="margin:0; padding:29px">
-                    <button class="toggleButton">
+                    <button onclick="toggleData('.$i.')">
                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-plus" viewBox="0 0 17 17">
                             <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4"/>
                         </svg>
@@ -82,193 +115,22 @@
                 </td>
             </tr>
             <tr>
-                <td colspan="3">Singapore</td> 
+                <td colspan="3">' . $location['To_location'] . '</td> 
             </tr>
             <tr>
                 <td colspan="8">
-                    <div class="detail-content" id="data1" style="display: none;">
-                        <div class="content-wrapper">
-                            <img style="width: 200px;" src="https://crystalcruises.com/_next/image?url=https%3A%2F%2Fcdn.crystalcruises.com%2Fimages%2Fscp71evy%2Fproduction%2F9a3236f4ed68c4d565d964ade0e79187298b2d62-4000x2667.jpg%3Frect%3D1090%2C0%2C2910%2C2667%26w%3D1920%26auto%3Dformat&w=1920&q=75" alt="">
-                            <p>adatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadata</p>
-                        </div>
-                    </div>
+                <div class="detail-content" id="data'.$i.'" style="display: none;">
+                <div class="content-wrapper">
+                    <img src="' . $location['Location_img'] . '" alt="">
+                    <p>' . $location['Description'] . '</p>
+                </div>
+            </div>
                 </td>
             </tr>
-
-
-           
-        </tbody>
-
-
-    </table>
-
-    <table class="table detail">
-    <tr>
-                <td rowspan="2" style="margin:0; padding:29px">02</td>
-                <td colspan="3">Singapore</td>
-                <td rowspan="2" style="margin:0; padding:29px">MAR 12, 2024</td>
-                <td rowspan="2" style="margin:0; padding:29px">Over Night</td>
-                <td rowspan="2" style="margin:0; padding:29px"></td>
-                <td rowspan="2" style="margin:0; padding:29px">
-                    <button class="toggleButton2">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-plus" viewBox="0 0 17 17">
-                            <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4"/>
-                        </svg>
-                    </button>
-                </td>
-            </tr>
-            <tr>
-                <td colspan="3">Singapore</td> 
-            </tr>
-            <tr>
-                <td colspan="8">
-                    <div class="detail-content" id="data2" style="display: none;">
-                        <div class="content-wrapper">
-                            <img style="width: 200px;" src="https://crystalcruises.com/_next/image?url=https%3A%2F%2Fcdn.crystalcruises.com%2Fimages%2Fscp71evy%2Fproduction%2F9a3236f4ed68c4d565d964ade0e79187298b2d62-4000x2667.jpg%3Frect%3D1090%2C0%2C2910%2C2667%26w%3D1920%26auto%3Dformat&w=1920&q=75" alt="">
-                            <p>data2</p>
-                        </div>
-                    </div>
-                </td>
-            </tr>
-    </table>
-
-
-    <table class="table detail">
-        <tbody>
-            <tr>
-                <td rowspan="2" style="margin:0; padding:29px">03</td>
-                <td colspan="3">Singapore</td>
-                <td rowspan="2" style="margin:0; padding:29px">MAR 12, 2024</td>
-                <td rowspan="2" style="margin:0; padding:29px">Over Night</td>
-                <td rowspan="2" style="margin:0; padding:29px"></td>
-                <td rowspan="2" style="margin:0; padding:29px">
-                    <button class="toggleButton3">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-plus" viewBox="0 0 17 17">
-                            <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4"/>
-                        </svg>
-                    </button>
-                </td>
-            </tr>
-            <tr>
-                <td colspan="3">Singapore</td> 
-            </tr>
-            <tr>
-                <td colspan="8">
-                    <div class="detail-content" id="data3" style="display: none;">
-                        <div class="content-wrapper">
-                            <img style="width: 200px;" src="https://crystalcruises.com/_next/image?url=https%3A%2F%2Fcdn.crystalcruises.com%2Fimages%2Fscp71evy%2Fproduction%2F9a3236f4ed68c4d565d964ade0e79187298b2d62-4000x2667.jpg%3Frect%3D1090%2C0%2C2910%2C2667%26w%3D1920%26auto%3Dformat&w=1920&q=75" alt="">
-                            <p>adatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadata</p>
-                        </div>
-                    </div>
-                </td>
-            </tr>
-
-
-           
-        </tbody>
-
-
-    </table>
-
-    <table class="table detail">
-    <tr>
-                <td rowspan="2" style="margin:0; padding:29px">04</td>
-                <td colspan="3">Singapore</td>
-                <td rowspan="2" style="margin:0; padding:29px">MAR 12, 2024</td>
-                <td rowspan="2" style="margin:0; padding:29px">Over Night</td>
-                <td rowspan="2" style="margin:0; padding:29px"></td>
-                <td rowspan="2" style="margin:0; padding:29px">
-                    <button class="toggleButton4">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-plus" viewBox="0 0 17 17">
-                            <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4"/>
-                        </svg>
-                    </button>
-                </td>
-            </tr>
-            <tr>
-                <td colspan="3">Singapore</td> 
-            </tr>
-            <tr>
-                <td colspan="8">
-                    <div class="detail-content" id="data4" style="display: none;">
-                        <div class="content-wrapper">
-                            <img style="width: 200px;" src="https://crystalcruises.com/_next/image?url=https%3A%2F%2Fcdn.crystalcruises.com%2Fimages%2Fscp71evy%2Fproduction%2F9a3236f4ed68c4d565d964ade0e79187298b2d62-4000x2667.jpg%3Frect%3D1090%2C0%2C2910%2C2667%26w%3D1920%26auto%3Dformat&w=1920&q=75" alt="">
-                            <p>data2</p>
-                        </div>
-                    </div>
-                </td>
-            </tr>
-    </table>
-
-
-    <table class="table detail">
-        <tbody>
-            <tr>
-                <td rowspan="2" style="margin:0; padding:29px">05</td>
-                <td colspan="3">Singapore</td>
-                <td rowspan="2" style="margin:0; padding:29px">MAR 12, 2024</td>
-                <td rowspan="2" style="margin:0; padding:29px">Over Night</td>
-                <td rowspan="2" style="margin:0; padding:29px"></td>
-                <td rowspan="2" style="margin:0; padding:29px">
-                    <button class="toggleButton5">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-plus" viewBox="0 0 17 17">
-                            <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4"/>
-                        </svg>
-                    </button>
-                </td>
-            </tr>
-            <tr>
-                <td colspan="3">Singapore</td> 
-            </tr>
-            <tr>
-                <td colspan="8">
-                    <div class="detail-content" id="data5" style="display: none;">
-                        <div class="content-wrapper">
-                            <img style="width: 200px;" src="https://crystalcruises.com/_next/image?url=https%3A%2F%2Fcdn.crystalcruises.com%2Fimages%2Fscp71evy%2Fproduction%2F9a3236f4ed68c4d565d964ade0e79187298b2d62-4000x2667.jpg%3Frect%3D1090%2C0%2C2910%2C2667%26w%3D1920%26auto%3Dformat&w=1920&q=75" alt="">
-                            <p>adatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadata</p>
-                        </div>
-                    </div>
-                </td>
-            </tr>
-
-
-           
-        </tbody>
-
-
-    </table>
-
-    <table class="table detail">
-    <tr>
-                <td rowspan="2" style="margin:0; padding:29px">06</td>
-                <td colspan="3">Singapore</td>
-                <td rowspan="2" style="margin:0; padding:29px">MAR 12, 2024</td>
-                <td rowspan="2" style="margin:0; padding:29px">Over Night</td>
-                <td rowspan="2" style="margin:0; padding:29px"></td>
-                <td rowspan="2" style="margin:0; padding:29px">
-                    <button class="toggleButton6">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-plus" viewBox="0 0 17 17">
-                            <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4"/>
-                        </svg>
-                    </button>
-                </td>
-            </tr>
-            <tr>
-                <td colspan="3">Singapore</td> 
-            </tr>
-            <tr>
-                <td colspan="8">
-                    <div class="detail-content" id="data6" style="display: none;">
-                        <div class="content-wrapper">
-                            <img style="width: 200px;" src="https://crystalcruises.com/_next/image?url=https%3A%2F%2Fcdn.crystalcruises.com%2Fimages%2Fscp71evy%2Fproduction%2F9a3236f4ed68c4d565d964ade0e79187298b2d62-4000x2667.jpg%3Frect%3D1090%2C0%2C2910%2C2667%26w%3D1920%26auto%3Dformat&w=1920&q=75" alt="">
-                            <p>data2</p>
-                        </div>
-                    </div>
-                </td>
-            </tr>
-    </table>
-
-
+        </table>';
+    }
+}
+?>
 
 
     </div>
@@ -355,8 +217,21 @@
    AOS.init({
     duration: 500,
     offset: 90,
-    once: false // Set this to false to trigger animations every time the element becomes visible
+    once: true // Set this to false to trigger animations every time the element becomes visible
 });
   </script>
+<script>
+    function toggleData(index) {
+        var dataParagraph = document.getElementById('data' + index);
+        if (dataParagraph) {
+            if (dataParagraph.style.display === 'none') {
+                dataParagraph.style.display = 'block';
+            } else {
+                dataParagraph.style.display = 'none';
+            }
+        }
+    }
+</script>
 </body>
 </html>
+
